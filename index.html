@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Peanut's Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="css/style.css">
+</head>
+<body>
+
+<div id="particles-js"></div>
+
+<div class="card" id="home">
+  <h1>Peanut's Network</h1>
+  <p>Better gaming experience.</p>
+  <button class="button" onclick="games()">Games</button>
+  <button class="button" onclick="android()">Android</button>
+  <button class="button" onclick="abcloak()">AB Cloak</button>
+</div>
+
+<div class="games-menu" id="games">
+  <h1>Games</h1>
+  <p>Go crazy</p>
+  <button class="purple-button" onclick="home()">Back</button>
+  <button class="button" onclick="loadgame('roblox')">Roblox</button>
+</div>
+
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+<script>
+
+  function home() {
+    const home = document.getElementById("home");
+    const games = document.getElementById("games");
+
+    home.style.zIndex = 9999;
+    games.style.zIndex = 0;
+  }
+
+  function games() {
+    const home = document.getElementById("home");
+    const games = document.getElementById("games");
+
+    home.style.zIndex = 0;
+    games.style.zIndex = 9999;
+  }
+
+  function android() {
+    var win;
+
+      var url = "https://s1p1.onrender.com/service/https://s1g7.onrender.com/play/uncube/7074/now.html";
+        if (url) {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+        }
+  }
+
+  function loadgame(game) {
+    var win;
+
+    if (game = "roblox") {
+      var url = "https://s1p1.onrender.com/service/https://s1g7.onrender.com/";
+        if (url) {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+        }
+    }  
+  }
+
+  function abcloak() {
+      var win;
+
+      var url = "https://peanutsnetwork.github.io";
+        if (url) {
+          if (win) {
+            win.focus();
+          } else {
+            win = window.open();
+            win.document.body.style.margin = '0';
+            win.document.body.style.height = '100vh';
+            var iframe = win.document.createElement('iframe');
+            iframe.style.border = 'none';
+            iframe.style.width = '100%';
+            iframe.style.height = '100%';
+            iframe.style.margin = '0';
+            iframe.src = url;
+            win.document.body.appendChild(iframe);
+          }
+        }
+    }
+</script>
+</body>
+</html>
+
+<!--https://read4ever-pnut.koyeb.app/uv/service/hvtrs8%2F-s3g5.mnpeldgr%2Ccmm--->
