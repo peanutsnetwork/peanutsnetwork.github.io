@@ -1,0 +1,118 @@
+<html>
+<head>
+    <link rel="stylesheet" media="screen" href="css/style.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+        }
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #34db50; /* Blue */
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .card {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="card" id="home">
+    <img src="icon.png">
+    <h1>Your content is loading...</h1>
+    <div class="loader"></div>
+</div>
+<script>
+function getParameterByName(name, url) {
+      if (!url) url = window.location.href;
+      name = name.replace(/[\[\]]/g, "\\$&");
+      var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+function findServer() {
+    var game = getParameterByName('game');
+
+    if (game === 'roblox') {
+        var servers = ['https://read4ever-pnut.koyeb.app/uv/service/hvtrs8%2F-fpoeigscraafe%2Cti%2Faoopklgd-aldpokd-rmbnoz%3Fqepvgr%3F1', 'https://acb.apktbg.com/demo', 'https://acb.caculatorgeo.online/demo', 'https://acb.caculatorgeo.info/demo', 'https://acb.caculatorgeo.one/demo'];
+        var loading = document.getElementById("home");
+        var iframe = document.createElement("iframe");
+        var i = 0;
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.style.zIndex = 1;
+
+        iframe.onload = function() {
+            iframe.style.zIndex = 9999;
+            loading.style.display = 'none';
+        };
+
+        iframe.src = servers[i];
+        document.body.appendChild(iframe);
+        if (iframe.src && !iframe.src.includes('blocked.goguardian.com')) {
+            iframe.style.zIndex = 9999;
+            loading.style.zIndex = 0;
+        } else if (iframe.src && !iframe.src.includes('block.opendns.com')) {
+            iframe.style.zIndex = 9999;
+            loading.style.zIndex = 0;
+        } else {
+            i++
+            iframe.src = servers[i];
+        }
+    }
+
+    if (game === 'android') {
+        var servers = ['https://read4ever-pnut.koyeb.app/uv/service/hvtrs8%2F-fpoeigscraafe%2Cti%2Faoopklgd-aldpokd-aldpokd%3Dsgrtep%3D3'];
+        var loading = document.getElementById("home");
+        var iframe = document.createElement("iframe");
+        var i = 0;
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.style.zIndex = 1;
+
+        iframe.onload = function() {
+            iframe.style.zIndex = 9999;
+            loading.style.display = 'none';
+        };
+
+        iframe.src = servers[i];
+        document.body.appendChild(iframe);
+        if (iframe.src && !iframe.src.includes('blocked.goguardian.com')) {
+            iframe.style.zIndex = 9999;
+            loading.style.zIndex = 0;
+        } else if (iframe.src && !iframe.src.includes('block.opendns.com')) {
+            iframe.style.zIndex = 9999;
+            loading.style.zIndex = 0;
+        } else {
+            i++
+            iframe.src = servers[i];
+        }
+    }
+}
+
+findServer();
+</script>
+</body>
+</html>
