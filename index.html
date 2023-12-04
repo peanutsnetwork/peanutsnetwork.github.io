@@ -15,6 +15,7 @@
   <p>Better gaming experience.</p>
   <button class="button" onclick="games()">Games</button>
   <button class="button" onclick="android()">Android</button>
+  <button class="button" onclick="soundboard()">Soundboard</button>
   <button class="button" onclick="abcloak()">AB Cloak</button>
 </div>
 
@@ -23,6 +24,9 @@
   <p>Go crazy</p>
   <button class="purple-button" onclick="home()">Back</button>
   <button class="button" onclick="loadgame('roblox')">Roblox</button>
+  <button class="button" onclick="loadgame('mctrial')">Minecraft Trial</button>
+  <button class="button" onclick="loadgame('msm')">My Singing Monsters</button>
+  <button class="button" onclick="loadgame('solarsmash')">Solar Smash</button>
 </div>
 
 <script src="../particles.js"></script>
@@ -34,14 +38,14 @@
     const games = document.getElementById("games");
 
     home.style.zIndex = 9999;
-    games.style.zIndex = 0;
+    games.style.zIndex = -7;
   }
 
   function games() {
     const home = document.getElementById("home");
     const games = document.getElementById("games");
 
-    home.style.zIndex = 0;
+    home.style.zIndex = -7;
     games.style.zIndex = 9999;
   }
 
@@ -49,10 +53,23 @@
     document.location.href = "/load.html?game=android"
   }
 
+  function soundboard() {
+    document.location.href = "/load.html?game=soundboard"
+  }
+
   function loadgame(game) {
-    if (game = "roblox") {
+    if (game === "roblox") {
       document.location.href = "/load.html?game=roblox"
-    }  
+    }
+    if (game === "mctrial") {
+      document.location.href = "/load.html?game=mctrial"
+    }
+    if (game === "msm") {
+      document.location.href = "/load.html?game=msm"
+    }
+    if (game === "solarsmash") {
+      document.location.href = "/load.html?game=solarsmash"
+    }    
   }
 
   function abcloak() {

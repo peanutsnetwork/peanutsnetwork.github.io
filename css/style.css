@@ -101,6 +101,7 @@ canvas{
 	left: 50%;
 	transform: translateX(-50%);
 	min-width: 350px;
+  max-width: 400px;
 	margin: 0 auto;
   background: linear-gradient(to bottom, rgba(48, 46, 45, 1), rgb(4, 69, 18));
 	min-height: 250px;
@@ -157,11 +158,12 @@ canvas{
 	left: 50%;
 	transform: translateX(-50%);
 	min-width: 350px;
+  max-width: 350px;
 	margin: 0 auto;
   background: linear-gradient(to bottom, rgba(48, 46, 45, 1), rgb(4, 69, 18));
 	min-height: 250px;
 	padding: 20px;
-	z-index: 0;
+	z-index: -7;
 	font-size: 24px;
 	text-align: center;
   color: white;
