@@ -230,6 +230,36 @@ function findServer() {
             iframe.src = servers[i];
         }
     }
+
+    if (game === 'youtube') {
+        var servers = ['https://read4ever-pnut.koyeb.app/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm-', 'https://learningisfun.dmsomisetty.repl.co/service/go/hvtr%3A-%2F%7Bowtwbg.aoo'];
+        var loading = document.getElementById("home");
+        var iframe = document.createElement("iframe");
+        var i = 0;
+        iframe.style.border = 'none';
+        iframe.style.width = '100%';
+        iframe.style.height = '100%';
+        iframe.style.margin = '0';
+        iframe.style.zIndex = 1;
+
+        iframe.onload = function() {
+            iframe.style.zIndex = 9999;
+            loading.style.display = 'none';
+        };
+
+        iframe.src = servers[i];
+        document.body.appendChild(iframe);
+        if (iframe.src && !iframe.src.includes('blocked.goguardian.com')) {
+            iframe.style.zIndex = 9999;
+            loading.style.zIndex = 0;
+        } else if (iframe.src && !iframe.src.includes('block.opendns.com')) {
+            iframe.style.zIndex = 9999;
+            loading.style.zIndex = 0;
+        } else {
+            i++
+            iframe.src = servers[i];
+        }
+    }
 }
 
 findServer();
@@ -237,4 +267,4 @@ findServer();
 </body>
 </html>
 
-<!--https://read4ever-pnut.koyeb.app/uv/service/hvtrs8%2F-nmweg%2Cnn%2Frlcy-pcrcd%7Bmg-eaoeq%2F0609-smlcr%2Fsoaqh-->
+<!--https://read4ever-pnut.koyeb.app/uv/service/hvtrs8%2F-wuw%2Cymuvu%60e%2Ccmm--->
